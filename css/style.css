@@ -1,0 +1,294 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
+
+:root {
+  /* Primary Colors */
+  --Soft-blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+
+  /* Neutral Colors */
+  --Very-dark-blue: hsl(217, 54%, 11%);
+  --Very-dark-blue: hsl(216, 50%, 16%);
+  --Very-dark-blue: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: hsl(217, 54%, 11%);
+}
+
+.card_title:hover {
+  color: var(--Cyan);
+}
+
+/* Usar hover junto com after */
+.card_creator p:hover::after {
+  content: "Jules Wyvern";
+  color: var(--Cyan);
+  margin: 0 10px;
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.3s ease;
+  color: white;
+}
+
+.card_image:hover img {
+  background-color: hsla(178, 100%, 50%, 0.5);
+}
+
+.card_image:hover .icon {
+  cursor: pointer;
+  width: 100%;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+@media screen and (max-width: 1440px) {
+  .container {
+    height: 100vh;
+    background-color: hsl(217, 54%, 11%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    width: 40vh;
+    height: fit-content;
+    background: hsl(216, 50%, 16%);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+    margin: 50px 20px;
+  }
+
+  .card_image {
+    object-fit: cover;
+    border-radius: 10px;
+    position: relative;
+  }
+
+  .card_image img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .card_content {
+    margin-top: 20px;
+  }
+
+  .card_title {
+    color: var(--White);
+    font-family: "outfit", sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    font-weight: 400;
+    letter-spacing: 1px;
+  }
+
+  .card_description {
+    color: var(--Soft-blue);
+    font-family: "outfit", sans-serif;
+    width: 100%;
+    line-height: 30px;
+    padding: 20px 0px 0 00px;
+    font-size: 18px;
+    font-weight: 300;
+  }
+
+  .card_price {
+    color: var(--Cyan);
+    font-family: "outfit", sans-serif;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  .days {
+    color: var(--Soft-blue);
+    font-family: "outfit", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+  }
+
+  .icon_clock {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 3px;
+    margin-right: 8px;
+  }
+
+  .icon_ethereum {
+    width: 15px;
+    height: 23px;
+    position: relative;
+    top: 5px;
+    margin-right: 8px;
+  }
+
+  .card_creator {
+    color: var(--Soft-blue);
+    font-family: "outfit", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    border-top: solid 1px hsl(215, 32%, 27%);
+    padding-top: 20px;
+  }
+
+  .card_creator img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: solid 1px var(--White);
+  }
+
+  .card_creator p::after {
+    content: "Jules Wyvern";
+    color: var(--White);
+    margin: 0 10px;
+  }
+}
+
+/* SCREEN 375PX */
+
+@media screen and (max-width: 375px) {
+  .container {
+    height: 100vh;
+    background-color: hsl(217, 54%, 11%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    height: 100%;
+    background: hsl(216, 50%, 16%);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+    margin: 50px 20px;
+  }
+
+  .card_image {
+    object-fit: cover;
+    border-radius: 10px;
+    position: relative;
+  }
+
+  .card_image img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .card_content {
+    margin-top: 20px;
+  }
+
+  .card_title {
+    color: var(--White);
+    font-family: "outfit", sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+
+  .card_description {
+    color: var(--Soft-blue);
+    font-family: "outfit", sans-serif;
+    width: 100%;
+    line-height: 30px;
+    padding: 20px 0px 0 00px;
+    font-size: 18px;
+    font-weight: 300;
+  }
+
+  .card_price {
+    color: var(--Cyan);
+    font-family: "outfit", sans-serif;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  .days {
+    color: var(--Soft-blue);
+    font-family: "outfit", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+  }
+
+  .icon_clock {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 3px;
+    margin-right: 8px;
+  }
+
+  .icon_ethereum {
+    width: 15px;
+    height: 23px;
+    position: relative;
+    top: 5px;
+    margin-right: 8px;
+  }
+
+  .card_creator {
+    color: var(--Soft-blue);
+    font-family: "outfit", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    border-top: solid 2px hsl(215, 32%, 27%);
+    padding: 20px 0 0 0;
+  }
+
+  .card_creator p {
+    margin: 0 10px;
+  }
+
+  .card_creator p::after {
+    content: "Jules Wyvern";
+    margin: 0 5px;
+    color: var(--White);
+  }
+
+  .card_creator img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: solid 2px var(--White);
+    margin-right: 10px;
+  }
+}
